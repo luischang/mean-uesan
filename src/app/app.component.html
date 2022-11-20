@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Welcome to {{ title }}! {{ fullName }}
+  </h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers ">
+        <td>{{customer._id}}</td>
+        <td>{{customer.firstName}}</td>
+        <td>{{customer.lastName}}</td>
+        <td>{{customer.age}}</td>
+        <td>
+          <img src="{{ customer.image }}" width="50" height="50" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
